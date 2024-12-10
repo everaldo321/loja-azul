@@ -1,0 +1,568 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Espaço automático entre itens */
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    flex-wrap: wrap; /* Permite quebra em telas pequenas */
+    gap: 20px; /* Espaçamento uniforme entre os itens */
+}
+
+header .logo {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px; /* Espaçamento extra da logo para o título */
+}
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0 20px; /* Adiciona espaço horizontal */
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+    text-align: center; /* Alinha o texto ao centro em telas pequenas */
+}
+
+header button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px; /* Espaçamento entre o botão e o título */
+}
+
+/*fim menu*/
+
+/* Carousel */
+.carousel-header {
+    background-color: #e9ecef;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+
+.carousel-container {
+    overflow-x: auto; /* Rolagem horizontal */
+    white-space: nowrap; /* Evita quebra de linha */
+    display: flex;
+    padding: 10px 0;
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+.carousel {
+    display: flex;
+    gap: 75px; /* Mais espaçamento entre os itens */
+    align-items: center;
+}
+
+.carousel-item {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 120px; /* Aumenta a largura */
+    height: 150px; /* Aumenta a altura */
+}
+
+.carousel-item img {
+    width: 120px; /* Ajusta a largura da imagem */
+    height: 120px; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.carousel-item p {
+    margin-top: 8px;
+    font-size: 1rem; /* Tamanho maior para o texto */
+    color: #333;
+}
+
+/* Responsividade do Carousel */
+@media (max-width: 768px) {
+    .carousel-container {
+        gap: 15px;
+    }
+
+    .carousel-item {
+        width: 100px; /* Reduz largura em telas menores */
+        height: 130px;
+    }
+
+    .carousel-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Product Cards */
+.caixa-produto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.caixa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+}
+
+.card .preco {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card .parcelas {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card .frete {
+    font-size: 0.9rem;
+    color: #28a745;
+}
+
+/* Footer */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer .footer-links a {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.footer .social-media a img {
+    width: 25px;
+    margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .main-header .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carousel-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header button {
+        font-size: 0.9rem;
+    }
+
+    .main-header .menu a {
+        font-size: 0.8rem;
+    }
+
+    .footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.titulo-produto:hover{
+    color:rgb(80, 80, 253);
+}
+.nome-do-item:hover{
+    color: #007bff;
+}
+/*pagina de login*/
+.login-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+
+    /* Centralização */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: 50px; /* Espaço abaixo do header */
+}
+
+/* fotter das paginas da div do cabeçario*/
+.fixed-footer {
+    position: fixed; /* Fixa o elemento na página */
+    bottom: 0; /* Alinha ao fundo */
+    left: 0; /* Alinha à esquerda */
+    width: auto; /* Ajusta a largura automaticamente ao conteúdo */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    z-index: 1000; /* Garante que o rodapé fique acima de outros elementos */
+}
+/*fim do footer*/
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+/*pagina de contato*/
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/*pagina de termos*/
+.content1 {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+/*pagina de Politica*/
+.content2 {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.mycart-module {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajuste para uma largura mais adequada no mobile */
+    max-width: 500px; /* Largura máxima para telas maiores */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.mycart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.mycart-header h2 {
+    font-size: 24px;
+}
+
+.mycart-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mycart-items {
+    margin-bottom: 20px;
+}
+
+.mycart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mycart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.mycart-item-details {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.mycart-item-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mycart-item-price {
+    font-size: 14px;
+    color: #555;
+}
+
+.mycart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.mycart-quantity-input {
+    width: 40px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.mycart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mycart-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mycart-checkout-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.mycart-checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .mycart-module {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .mycart-header h2 {
+        font-size: 20px;
+    }
+
+    .mycart-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mycart-item-name {
+        font-size: 14px;
+    }
+
+    .mycart-item-price {
+        font-size: 12px;
+    }
+
+    .mycart-quantity-input {
+        width: 30px;
+        font-size: 14px;
+    }
+
+    .mycart-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mycart-checkout-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
